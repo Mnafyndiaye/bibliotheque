@@ -36,5 +36,33 @@ public class Utilisateur {
         this.estAJourCotisation = estAjourCotisation ;
     }
 
-    public 
+    public ArrayList<Livre>  getLivresEmpruntes() {
+        return livresEmpruntes;
+    }
+
+    public void emprunterLivre(Livre livre){
+        if(estAJourCotisation){
+            livresEmpruntes.add(livre);
+            System.out.println("L'utilisateur" + nom + "a emprunté " + livre.getTitre() + ".");
+        }else{
+            System.out.println("L'utilisateur" + nom + "n'est pas à jour sur sa cotisation" );
+        }
+    }
+
+    public void retournerLivre(Livre livre){
+        livresEmpruntes.remove(livre);
+        System.out.println("L'utilisateur " + nom + " a retourné le livre : " + livre.getTitre());
+    }
+
+    public void afficherLivresEmpruntes(Livre livre){
+        if(livresEmpruntes.isEmpty()){
+            System.out.println("Pas de livres empruntés par l'utilisateur " + nom);
+        } else {
+            for (Livre livre : livresEmpruntes) {
+                System.out.print(livre);
+            }
+        }    
+    }
+
+    
 }
