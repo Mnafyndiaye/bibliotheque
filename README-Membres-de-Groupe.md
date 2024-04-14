@@ -1,5 +1,5 @@
 Adama BALDE 
-Maman NafI NDIAYE
+Maman Nafy NDIAYE
 Yves Perly NGABO
 Papa Amadou Mandiaye NDIAYE
 
